@@ -1,24 +1,31 @@
-# README
+# Rails Advanced Active Record Association Lab
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Task : Working in pairs, create 5 models and link them together with different types of association. Make use of Loops in your seed file and Faker
 
-Things you may want to cover:
+#### *Models:*
 
-* Ruby version
+* Country
+  * name:*string*
+* Author
+  * first_name:*string*
+  * last_name:*string*
+  * age:*integer*
+* Book
+  * title:*string*
+  * genre:*string*
+  * published:*date*
+* Chapter
+  * title:*string*
+* Paragraph
+  * body:*text*
 
-* System dependencies
+#### *Relationships:*
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Country has many Authors
+* Author belongs to Country
+* Author has many Books
+* Book belongs to Author
+* Book has many Chapters
+* Book has many Paragraphs through Chapters
+* Chapter has many Paragraphs
+* Paragraph belongs to Chapter
